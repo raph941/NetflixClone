@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from "react";
 import axios from "../axios";
-import "../styles/Row.css"
-import Youtube from "react-youtube"
-import movieTrailer from "movie-trailer"
+import "../styles/Row.css";
+import Youtube from "react-youtube";
+import movieTrailer from "movie-trailer";
 
 const baseURL = "https://image.tmdb.org/t/p/original/";
 
 function Row({ title, fetchUrl, isLargeRow }) {
   const [movies, setMovies] = useState([]);
-  const [trailerUrl, setTrailerUrl] = useState('');
+  const [trailerUrl, setTrailerUrl] = useState("");
   // options for playing movie trailers
   const opts = {
     height: "390",
@@ -19,10 +19,9 @@ function Row({ title, fetchUrl, isLargeRow }) {
   };
   // handle movie poster click event
   const handleClick = (movie) => {
-    if (trailerUrl){
-      setTrailerUrl('')
-    }
-    else{
+    if (trailerUrl) {
+      setTrailerUrl("");
+    } else {
       // {
       //   movie?.title || movie?.name || movie?.orginal_title
       // }
@@ -34,7 +33,7 @@ function Row({ title, fetchUrl, isLargeRow }) {
         })
         .catch((error) => console.log(error));
     }
-  }
+  };
   // a snippet of code that runs based on specific condition
   useEffect(() => {
     // if [](i.e empty array at the end) runs once when the page loads and will not run again
@@ -65,7 +64,7 @@ function Row({ title, fetchUrl, isLargeRow }) {
         })}
       </div>
 
-      {trailerUrl && <Youtube videoId={trailerUrl} opts={opts} /> }
+      {trailerUrl && <Youtube videoId={trailerUrl} opts={opts} />}
 
       {/* Container --> posters */}
     </div>
