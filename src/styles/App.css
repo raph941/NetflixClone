@@ -1,0 +1,9 @@
+*{
+  margin: 0px;
+}
+
+.App{
+  background-color: #111111;
+  width: 100%;
+  overflow-x: hidden;
+}
