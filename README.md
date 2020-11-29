@@ -1,3 +1,4 @@
+[![Status](https://img.shields.io/website-up-down-green-red/https/netflix-clone123.netlify.app/health.svg)](netflix-clone123.netlify.app)
 [![Made with React](https://img.shields.io/badge/made%20with-React-orange.svg)](https://reactjs.org/)
 
 React app, to chat in real time with various users.
